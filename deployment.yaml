@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tcp-echo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tcp-echo
+  template:
+    metadata:
+      labels:
+        app: tcp-echo
+    spec:
+      containers:
+      - name: tcp-echo
+        image: busybox
+        command: ["/bin/sh", "-c", "while true; do nc -lk -p 9000 -e /bin/cat; done"]
+        ports:
+        - containerPort: 9000
+
