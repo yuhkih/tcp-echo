@@ -1,7 +1,7 @@
 # tcp-echo
 
 
-Return the same string you enterl.
+Return the same string you enter.
 
 ```
 $ oc get svc
