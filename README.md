@@ -21,3 +21,5 @@ hello!
 ^C
 $ 
 ```
+
+With ROSA 4.18, CLB will be deployed for Sevice type=LoadBalancer
