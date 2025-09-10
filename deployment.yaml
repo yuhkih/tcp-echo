@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tcp-echo
+  namespace: tcp-echo
 spec:
   replicas: 1
   selector:
